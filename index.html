@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+
+<head>
+    <title>task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="libraries/angular.js"></script>
+    
+    <link rel="stylesheet" href="libraries/bootstrap.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="libraries/bootstrap-theme.css">
+    <script src="app.js" type="text/javascript"></script>
+</head>
+
+<body ng-controller="myCtrl">
+    <div class="panel panel-primary">
+        <h2 class="panel-heading text-center">{{currentView}}</h2>
+        <ng-include src="'views/table.html'" ng-show="page == 1"></ng-include>
+        <ng-include src="'views/edit.html'" ng-show="page == 2"></ng-include>
+    </div>
+</body>
+
+</html>

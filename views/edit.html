@@ -1,0 +1,31 @@
+<div>
+
+
+    <div class="panel-body">
+        <button ng-click="previous()" class="btn btn-success btn-default">Назад</button>
+    </div>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr class="success">
+                <th>Task name</th>
+                <th>Actual effort</th>
+                <th>Estimated effort</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td ng-click="inlineeditor()">
+                    <input type="text" ng-model="item.name" ng-style="borderInp">
+                    <input ng-hide="x" type="button" value="Сохранить" ng-click="ok()" class="btn btn-xs btn-success pull-right">
+                </td>
+                <td>{{item.actual_effort}}</td>
+                <td>{{item.estimated_effort}}</td>
+                <td>{{item.description}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
